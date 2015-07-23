@@ -26,6 +26,11 @@ a {
   font-size: 30px;
 }
 
+h1 a:link, h1 a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 .secondblock {
   padding: 5px 10px 10px 10px;
   margin-top : 11%;
@@ -88,11 +93,6 @@ a {
   width: 98.5%;
 }
 
-h3 a:link, a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
 .excerpt {
   background-color: #FFFAFA;
   float: left;
@@ -101,9 +101,9 @@ h3 a:link, a:visited {
   padding-left: 10px;
 }
 
-h1 a:link, h1 a:visited {
+h3 a:link, a:visited {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 h3 {
