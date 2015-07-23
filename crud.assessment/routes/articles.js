@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = require('monk')(process.env.DB_HOST || 'localhost/articles');
+var db = require('monk')(process.env.MONGOLAB_URI || 'localhost/articles');
 var articles = db.get('articles');
 var validations = require('../valid/validations.js');
 
