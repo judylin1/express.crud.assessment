@@ -1,19 +1,19 @@
 module.exports = function validate(title, excerpt, body) {
-
-    errorMessagesArray = [];
+    errorsArray = [];
 
     if(!title.trim()) {
-      errorMessagesArray.push("Title cannot be blank");
+      errorsArray.push("Title cannot be blank.");
     }
+
     if(!excerpt.trim()) {
-      errorMessagesArray.push("Excerpt cannot be blank");
+      errorsArray.push("Excerpt cannot be blank.");
     }
+
     if(!body.trim()) {
-      errorMessagesArray.push("Body cannot be blank");
+      errorsArray.push("Body cannot be blank.");
     }
 
-    if(errorMessagesArray.length > 0) {
-      return errorMessagesArray;
+    if(errorsArray.length > 0) {
+      return errorsArray;
     };
-
 };
