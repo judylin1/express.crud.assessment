@@ -18,8 +18,8 @@ block content
         div
           label(for='background') Background URL
           input(type="text" id='background' name='background' value=(article)? '#{article.backgroundImg}' : '')
-        if(article)
-          if (article.isDark==='on')
+        if article
+          if article.isDark==='on'
             div
               input(type="checkbox" name='dark' id='dark' checked)
               label(for='dark' class='box') Background image has dark colors

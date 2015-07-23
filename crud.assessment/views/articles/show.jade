@@ -5,7 +5,7 @@ block content
     h1 The Zine
   div.art
     div.article
-      if (article.isDark)
+      if article.isDark
         div.title(style='background-image: url('+((article.backgroundImg)? "#{article.backgroundImg}":"../images/light.png")+'); color: white;')
           h3
             a(href='/articles/' + article._id) #{article.title}
