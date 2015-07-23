@@ -1,0 +1,50 @@
+extends ../layout
+
+block content
+  div.header
+    h1 The Zine
+  div.secondblock
+    div.secblock
+      h2 Edit Article
+    div.form
+      if errors 
+        ul Please correct the errors below:
+          each error in errors
+            li=error
+      form(action='/articles/' + article._id method='post')
+        div
+          label(for='title') Title
+          input(type="text" id='title' name='title' value=(article)? '#{article.title}' : '')
+        div
+          label(for='background') Background URL
+          input(type="text" id='background' name='background' value=(article)? '#{article.backgroundImg}' : '')
+        if(article)
+          if (article.isDark==='on')
+            div
+              input(type="checkbox" name='dark' id='dark' checked)
+              label(for='dark' class='box') Background image has dark colors
+          else
+            div
+              input(type="checkbox" name='dark' id='dark')
+              label(for='dark' class='box') Background image has dark colors
+          div
+            label(for='excerpt') Excerpt
+            textarea(id='excerpt' name='excerpt') #{article.excerpt}
+          div
+            label(for='body') Body
+            textarea(id='body' name='body') #{article.body}
+        else
+          div
+            input(type="checkbox" name='dark' id='dark')
+            label(for='dark' class='box') Background image has dark colors
+            div
+              label(for='excerpt') Excerpt
+              textarea(id='excerpt' name='excerpt')
+            div
+              label(for='body') Body
+              textarea(id='body' name='body')
+        div
+          input.button(type="submit" value='Update Article')
+    div.delete
+      form(action='/articles/' + article._id +'/delete' method='post')
+        input.button(type='submit' value='Delete')

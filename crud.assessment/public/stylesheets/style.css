@@ -1,8 +1,140 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/congruent_outline.png");
 }
 
 a {
   color: #00B7FF;
+}
+
+.header {
+  background-image: url("/images/header_background.jpeg");
+  height: 160px;
+  overflow: hidden;
+  margin-top: 0px;
+  top: 0;
+  position: absolute;
+  width: 90.5%;
+}
+
+.header h1 {
+  float: right;
+  margin-top: 60px;
+  margin-right: 3%;
+  display: inline-block;
+  font-size: 30px;
+}
+
+.secondblock {
+  padding: 5px 10px 10px 10px;
+  margin-top : 11%;
+  background-color: white;
+}
+
+.secblock {
+  border-bottom: 1px solid lightgray;
+  height: 30px;
+}
+
+.form div {
+  margin-top: 2%;
+}
+
+.form label {
+  display: inline-block;
+  width: 15%;
+}
+
+.form input {
+  width: 65%;
+}
+
+.form input[type='checkbox'] {
+  width: auto;
+  margin-left: 15%;
+}
+
+.form .box {
+  display: inline-block;
+  width: 25%;
+  margin-left: 1%;
+}
+
+.form input[type='submit'] {
+  width: auto;
+  margin-left: 15%;
+}
+
+.form textarea {
+  height: 8em;
+  width: 65%;
+}
+
+.art {
+  margin-top: 11%;
+}
+
+.article {
+  margin-bottom: 10%;
+  clear: both;
+  position: relative;
+}
+
+.title {
+  height: 50px;
+  padding-left: 10px;
+  padding-top: 5px;
+  width: 98.5%;
+}
+
+h3 a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.excerpt {
+  background-color: #FFFAFA;
+  float: left;
+  width: 98.5%;
+  height: 7em;
+  padding-left: 10px;
+}
+
+h1 a:link, h1 a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  float: left;
+}
+
+h3.edit {
+  float: right;
+  margin-right: 1em;
+}
+
+.delete input {
+  background-color: red;
+  margin-left: 15%;
+  margin-top: 1%;
+}
+
+ul {
+  margin-left: 12%;
+  color: red;
+}
+
+ul li {
+  margin-left: 2%;
+}
+
+.create {
+  color: red;
+}
+
+.button {
+  background-color: white;
+  border-radius: 6px;
 }

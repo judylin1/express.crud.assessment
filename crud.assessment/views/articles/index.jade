@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  div.header
+    h1 The Zine
+  div.art
+    if (data)
+      each article in data
+        div.article
+          if (article.isDark)
+            div.title(style='background-image: url('+((article.backgroundImg)? "#{article.backgroundImg}":"images/light.png")+'); color: white;')
+              h3
+                a(href='/articles/' + article._id) #{article.title}
+            div.excerpt
+              p= article.excerpt
+          else
+            div.title(style='background-image: url('+((article.backgroundImg)? "#{article.backgroundImg}":"images/light.png")+'); color: black;')
+              h3
+                a(href='/articles/' + article._id) #{article.title}
+            div.excerpt
+              p= article.excerpt
+  div.create
+    a(href='/articles/new') Add an Article
