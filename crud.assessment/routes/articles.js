@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var db = require('monk')(process.env.DB_HOST || process.env.MONGOLAB_URI);
+var db = require('monk')(process.env.DB_HOST || 'localhost/articles');
 var articles = db.get('articles');
-var validations = require('../src/validations.js');
+var validations = require('../valid/validations.js');
 
 var title = 'The Zine';
 
